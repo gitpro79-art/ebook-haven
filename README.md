@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 # Welcome to our Lovable project
+=======
 
 ## Project info
 
