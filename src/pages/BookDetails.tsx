@@ -32,7 +32,7 @@ const BookDetails = () => {
 
   const handleReadNow = () => {
     if (book?.pdfUrl) {
-      navigate(`/reader/${id}`);
+      window.open(book.pdfUrl, '_blank');
     } else {
       toast({
         title: "PDF Not Available",

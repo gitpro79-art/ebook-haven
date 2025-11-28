@@ -10,7 +10,6 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import BookDetails from "./pages/BookDetails";
-import PDFReader from "./pages/PDFReader";
 import Wishlist from "./pages/Wishlist";
 import NotFound from "./pages/NotFound";
 
@@ -40,14 +39,6 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <BookDetails />
-                </ProtectedRoute>
-              } 
-            />
-            <Route 
-              path="/reader/:id" 
-              element={
-                <ProtectedRoute>
-                  <PDFReader />
                 </ProtectedRoute>
               } 
             />

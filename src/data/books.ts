@@ -11,17 +11,18 @@ export const staticBooks: Book[] = [
   {
     id: "1",
     title: "The Adventures of Sherlock Holmes",
-    author: "Arthur Conan Doyle",
+    author: " Shina Doyle",
     description: "A collection of twelve short stories featuring the famous detective Sherlock Holmes. These tales of mystery and deduction showcase Holmes's brilliant mind as he solves some of London's most perplexing cases.",
     coverUrl: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop",
-    pdfUrl: "https://www.gutenberg.org/files/1661/1661-h/1661-h.pdf"
+    pdfUrl: "https://www.gutenberg.org/files/1661/1661-h/1661-h.htm"
   },
   {
     id: "2",
     title: "Pride and Prejudice",
     author: "Jane Austen",
     description: "A timeless romance following Elizabeth Bennet as she navigates issues of marriage, morality, and misunderstandings in Georgian era England.",
-    coverUrl: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop"
+    coverUrl: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop",
+    pdfUrl: "https://www.gutenberg.org/files/1342/1342-h/1342-h.htm"
   },
   {
     id: "3",
@@ -49,7 +50,8 @@ export const staticBooks: Book[] = [
     title: "Moby-Dick",
     author: "Herman Melville",
     description: "The epic tale of Captain Ahab's obsessive quest to hunt down the white whale that took his leg, exploring themes of fate and obsession.",
-    coverUrl: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=400&h=600&fit=crop"
+    coverUrl: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=400&h=600&fit=crop",
+    pdfUrl: "https://www.gutenberg.org/files/2701/2701-0.pdf"
   },
   {
     id: "7",
