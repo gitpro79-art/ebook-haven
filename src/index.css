@@ -9,71 +9,71 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Chocolate Truffle Theme - Warm & Elegant */
-    --background: 33 52% 91%; /* Cream */
-    --foreground: 20 11% 21%; /* Dark Brown */
+    --background: 58 90% 91%; /* Cream */
+    --foreground: 29 62% 13%; /* Darker Brown */
 
     --card: 0 0% 100%; /* Pure white for cards */
-    --card-foreground: 20 11% 21%;
+    --card-foreground: 29 62% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 11% 21%;
+    --popover-foreground: 29 62% 13%;
 
-    --primary: 20 11% 21%; /* Dark Brown */
-    --primary-foreground: 33 52% 91%; /* Cream */
+    --primary: 28 100% 38%; /* Caramel */
+    --primary-foreground: 58 90% 91%; /* Cream */
 
-    --secondary: 32 43% 60%; /* Caramel */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 29 100% 22%; /* Dark Brown */
+    --secondary-foreground: 58 90% 91%;
 
-    --muted: 33 30% 85%;
-    --muted-foreground: 20 11% 35%;
+    --muted: 58 30% 85%;
+    --muted-foreground: 29 62% 23%;
 
-    --accent: 32 43% 60%; /* Caramel accent */
-    --accent-foreground: 0 0% 100%;
+    --accent: 28 100% 38%; /* Caramel accent */
+    --accent-foreground: 58 90% 91%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 33 20% 80%;
-    --input: 33 20% 80%;
-    --ring: 32 43% 60%;
+    --border: 28 30% 80%;
+    --input: 28 30% 80%;
+    --ring: 28 100% 38%;
 
     --radius: 0.75rem;
 
     /* Custom theme colors */
-    --chocolate: 20 11% 21%;
-    --caramel: 32 43% 60%;
-    --cream: 33 52% 91%;
-    --warm-gradient: linear-gradient(135deg, hsl(33 52% 91%), hsl(32 43% 85%));
+    --chocolate: 29 100% 22%;
+    --caramel: 28 100% 38%;
+    --cream: 58 90% 91%;
+    --warm-gradient: linear-gradient(135deg, hsl(58 90% 91%), hsl(28 43% 85%));
   }
 
   .dark {
-    --background: 20 11% 21%;
-    --foreground: 33 52% 91%;
+    --background: 29 62% 13%;
+    --foreground: 58 90% 91%;
 
-    --card: 20 15% 25%;
-    --card-foreground: 33 52% 91%;
+    --card: 29 40% 20%;
+    --card-foreground: 58 90% 91%;
 
-    --popover: 20 15% 25%;
-    --popover-foreground: 33 52% 91%;
+    --popover: 29 40% 20%;
+    --popover-foreground: 58 90% 91%;
 
-    --primary: 32 43% 60%;
-    --primary-foreground: 20 11% 21%;
+    --primary: 28 100% 38%;
+    --primary-foreground: 29 62% 13%;
 
-    --secondary: 20 15% 30%;
-    --secondary-foreground: 33 52% 91%;
+    --secondary: 29 100% 22%;
+    --secondary-foreground: 58 90% 91%;
 
-    --muted: 20 15% 30%;
-    --muted-foreground: 33 30% 70%;
+    --muted: 29 40% 25%;
+    --muted-foreground: 58 30% 70%;
 
-    --accent: 32 43% 60%;
-    --accent-foreground: 20 11% 21%;
+    --accent: 28 100% 38%;
+    --accent-foreground: 29 62% 13%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 33 52% 91%;
+    --destructive-foreground: 58 90% 91%;
 
-    --border: 20 15% 30%;
-    --input: 20 15% 30%;
-    --ring: 32 43% 60%;
+    --border: 29 40% 25%;
+    --input: 29 40% 25%;
+    --ring: 28 100% 38%;
   }
 }
 
