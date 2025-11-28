@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import { staticBooks } from '@/data/books';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { wishlistAPI } from '@/lib/api';
+import { wishlistService } from '@/lib/wishlist';
 import { BookOpen, Heart, ArrowLeft } from 'lucide-react';
 
 const BookDetails = () => {
@@ -21,11 +21,12 @@ const BookDetails = () => {
   }, [id]);
 
   const checkWishlistStatus = async () => {
+    if (!id) return;
     try {
-      const wishlist = await wishlistAPI.getWishlist();
-      setIsInWishlist(wishlist.some((item: any) => item.bookId === id));
+      const inWishlist = await wishlistService.checkInWishlist(id);
+      setIsInWishlist(inWishlist);
     } catch (error) {
-      // Wishlist check failed silently
+      // Silently fail - user might not be logged in
     }
   };
 
@@ -47,14 +48,14 @@ const BookDetails = () => {
 
     try {
       if (isInWishlist) {
-        await wishlistAPI.removeFromWishlist(book.id);
+        await wishlistService.removeFromWishlist(book.id);
         setIsInWishlist(false);
         toast({
           title: "Removed from wishlist",
           description: `${book.title} has been removed from your wishlist.`,
         });
       } else {
-        await wishlistAPI.addToWishlist(book.id);
+        await wishlistService.addToWishlist(book.id);
         setIsInWishlist(true);
         toast({
           title: "Added to wishlist",
@@ -64,7 +65,7 @@ const BookDetails = () => {
     } catch (error: any) {
       toast({
         title: "Error",
-        description: error.response?.data?.message || "Failed to update wishlist",
+        description: error.message || "Failed to update wishlist",
         variant: "destructive",
       });
     } finally {
