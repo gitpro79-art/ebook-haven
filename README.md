@@ -1,4 +1,4 @@
-# Welcome to my Awesome project
+# Welcome to our Amazing project
 
 ## Project info
 
