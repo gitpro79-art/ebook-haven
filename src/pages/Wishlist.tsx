@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import BookCard from '@/components/BookCard';
-import { wishlistAPI } from '@/lib/api';
+import { wishlistService } from '@/lib/wishlist';
 import { staticBooks } from '@/data/books';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
@@ -17,16 +17,16 @@ const Wishlist = () => {
 
   const fetchWishlist = async () => {
     try {
-      const wishlist = await wishlistAPI.getWishlist();
+      const wishlist = await wishlistService.getWishlist();
       // Map wishlist items to actual book data
       const books = wishlist
-        .map((item: any) => staticBooks.find(book => book.id === item.bookId))
+        .map((item: any) => staticBooks.find(book => book.id === item.book_id))
         .filter(Boolean);
       setWishlistBooks(books);
     } catch (error: any) {
       toast({
         title: "Error loading wishlist",
-        description: error.response?.data?.message || "Failed to load your wishlist",
+        description: error.message || "Failed to load your wishlist",
         variant: "destructive",
       });
     } finally {

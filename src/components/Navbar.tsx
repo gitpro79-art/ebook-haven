@@ -7,10 +7,16 @@ const Navbar = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout();
-    navigate('/');
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate('/');
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   };
+
+  const username = user?.user_metadata?.username || user?.email?.split('@')[0] || 'User';
 
   return (
     <nav className="bg-card border-b border-border sticky top-0 z-50 shadow-sm">
@@ -36,7 +42,7 @@ const Navbar = () => {
             
             <div className="flex items-center space-x-2 pl-4 border-l border-border">
               <User className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm text-foreground font-medium">{user?.username}</span>
+              <span className="text-sm text-foreground font-medium">{username}</span>
             </div>
 
             <Button 
